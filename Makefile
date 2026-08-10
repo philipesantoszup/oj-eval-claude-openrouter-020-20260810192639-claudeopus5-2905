@@ -1,3 +1,9 @@
-.PHONY: all
+CC = gcc
+CFLAGS = -O2
+
+.PHONY: all clean
 all:
-	gcc -o test main.c buddy.c
+	$(CC) $(CFLAGS) -o code main.c buddy.c
+
+clean:
+	rm -f code
